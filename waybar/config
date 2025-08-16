@@ -1,0 +1,35 @@
+{
+
+    // general settings 
+    "layer": "top",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "spacing": 4,
+    
+    // load modules
+    "include":["~/dotfiles/waybar/modules.json"],
+
+    "modules-left": [
+        "hyprland/window",
+        "hyprland/mode",
+        "hyprland/scratchpad",
+        "custom/media"
+    ],
+
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-right": [
+        "power-profiles-daemon",
+        "pulseaudio",
+        "clock",
+        "battery",
+        "cpu",
+        "memory",
+        "disk",
+        "custom/exit"
+    ],
+    
+
+}
