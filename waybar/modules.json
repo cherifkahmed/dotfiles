@@ -24,7 +24,7 @@
 
     "cpu": {
         "interval": 10,
-        "format": "{}% ",
+        "format": " {}%   / ",
         "max-length": 10
     },
     "disk": {
@@ -34,7 +34,7 @@
     },
     "memory": {
         "interval": 30,
-        "format": "{}% ",
+        "format": "{}%   / ",
         "max-length": 10
     },
     "power-profiles-daemon": {
@@ -67,5 +67,17 @@
         "scroll-step": 1,
         "on-click": "pavucontrol",
         "ignored-sinks": ["Easy Effects Sink"]
+    },
+    "network": {
+        "interface": "wlan0",
+        "format": "{ifname}",
+        "format-wifi": "  ",
+        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "format-disconnected": "Tnekna", //An empty format will hide the module.
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
     }
 }
