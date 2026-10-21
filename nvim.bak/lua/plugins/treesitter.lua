@@ -8,6 +8,7 @@ return {
       -- languages you want installed
       ensure_installed = {
         "lua",
+        "php",
         "python",
         "bash",
         "json",

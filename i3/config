@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+set $mod mod1
 
 default_border pixel 5
 ###########  Launcher  #############
@@ -17,14 +17,25 @@ bindsym $mod+m mode "$mode_launcher"
 mode "$mode_launcher" {
 	bindsym f exec firefox
 	bindsym b exec brave-browser
+	bindsym d exec virt-manager
+
+
+	bindsym Return mode "default"
+}
+bindsym $mod+t mode "$tool_launcher"
+mode "$tool_launcher" {
+	bindsym s exec flameshot gui -p ~/Pictures
+
 
 	bindsym Return mode "default"
 }
 
 workspace_auto_back_and_forth yes
-gaps inner 7px
-for_window [class="Alacritty" title="quicknote"] floating enable, resize set 600 500, move position center
+gaps inner 5px
+for_window [class="Alacritty" title="quicknote"] floating enable, resize set 800 600, move position center
 bindsym $mod+n exec alacritty --title quicknote -e nvim ~/note.md
+client.focused          #b16286 #b16286 #ffffff #b16286
+exec --no-startup-id feh --bg-fill ~/pikachu.png
 #bindsym XF86AudioRaiseVolume exec -- pactl set-sink-volume @DEFAULT_SINK@ +10%
 #bindsym XF86AudioLowerVolume exec -- pactl set-sink-volume @DEFAULT_SINK@ -10%
 #bindsym XF86AudioMute exec -- pactl set-sink-mute @DEFAULT_SINK@ toggle
